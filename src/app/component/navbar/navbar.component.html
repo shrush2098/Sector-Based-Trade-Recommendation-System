@@ -1,0 +1,40 @@
+<div id="headline">
+    
+    <img class="logo" src="assets/tradesmart.png">
+  <!--<img src='/home/dell/Desktop/CITIBRIDGE/nodejsday4/TradeReco/src/assets/images.png'>--> 
+  </div><br>
+<div class="separator">
+<nav class="navbar navbar-expand-md bg-info  " >
+<a class="navbar-brand mainname" href="#" *ngIf="!authService.loggedIn()"></a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <ul class="nav navbar-nav navbar-left"></ul>
+        <li *ngIf="!authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}"><a [routerLink]="['/']"> HOME  </a></li>
+      
+
+      
+      <ul class="nav navbar-nav navbar-right"></ul>
+      
+            
+            <li class="nav-item" *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">
+              <a  [routerLink]="['/dashboard']">Dashboard </a>
+            </li>
+            <li class="nav-item" *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">
+              <a  [routerLink]="['/profile']">Profile </a>
+            </li>
+            <li class="nav-item" *ngIf="!authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">
+              <a  [routerLink]="['/login']">SignIn</a>
+            </li>
+            <li class="nav-item" *ngIf="!authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">
+              <a  [routerLink]="['/register']">SignUp</a>
+            </li>
+            <li class="nav-item" *ngIf="authService.loggedIn()"><a class="nav-link" (click)="onLogoutClick()" href="#">Logout</a>
+            </li>
+      
+    </div>
+</nav>
+</div>
+

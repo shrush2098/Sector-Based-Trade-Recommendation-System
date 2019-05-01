@@ -1,0 +1,32 @@
+#horizon        
+    {
+    
+    text-align: center;
+    
+    }
+
+#head{
+    font-style: bold;
+}
+#first{
+align-self: center;
+}
+#savebtn0{
+    text-align: center;
+}
+#z{
+    align-content: center;
+}
+#sel {
+    width:40%;
+    height:150%;
+    font-size: 15px;
+    padding-left: 20px;
+    text-decoration: none;
+    color: black;
+    border-color:black;
+    background-color: white;
+}
+#sec{
+    width: 15%;
+}
